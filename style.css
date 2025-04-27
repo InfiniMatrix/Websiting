@@ -1,0 +1,2339 @@
+/* =====================================================================
+   IAA Solutions - Advanced AI Design System
+   A comprehensive design system for enterprise AI websites
+   ===================================================================== */
+   
+/* ------------------------------------------------------------
+   1. Core AI Design Variables - Color System
+   ------------------------------------------------------------ */
+   
+:root {
+  /* === AI Intelligence Color System === */
+  /* Primary Palette - Deep Neural */
+  --ai-primary-50: oklch(98% 0.02 280);
+  --ai-primary-100: oklch(96% 0.04 280);
+  --ai-primary-200: oklch(92% 0.08 280);
+  --ai-primary-300: oklch(84% 0.14 280);
+  --ai-primary-400: oklch(74% 0.18 280);
+  --ai-primary-500: oklch(64% 0.22 280);  /* Base Neural Blue */
+  --ai-primary-600: oklch(54% 0.20 280);
+  --ai-primary-700: oklch(44% 0.18 280);
+  --ai-primary-800: oklch(34% 0.16 280);
+  --ai-primary-900: oklch(24% 0.14 280);
+  --ai-primary-950: oklch(15% 0.10 280);
+  
+  /* Secondary Palette - Quantum Teal */
+  --ai-secondary-50: oklch(98% 0.02 210);
+  --ai-secondary-100: oklch(95% 0.04 210);
+  --ai-secondary-200: oklch(90% 0.07 210);
+  --ai-secondary-300: oklch(82% 0.12 210);
+  --ai-secondary-400: oklch(74% 0.16 210);
+  --ai-secondary-500: oklch(64% 0.18 210);  /* Base Quantum Teal */
+  --ai-secondary-600: oklch(54% 0.16 210);
+  --ai-secondary-700: oklch(44% 0.14 210);
+  --ai-secondary-800: oklch(34% 0.12 210);
+  --ai-secondary-900: oklch(24% 0.10 210);
+  --ai-secondary-950: oklch(14% 0.08 210);
+  
+  /* Accent Palette - Insight Amber */
+  --ai-accent-50: oklch(97% 0.03 85);
+  --ai-accent-100: oklch(95% 0.05 85);
+  --ai-accent-200: oklch(90% 0.09 85);
+  --ai-accent-300: oklch(84% 0.14 85);
+  --ai-accent-400: oklch(76% 0.18 85);
+  --ai-accent-500: oklch(68% 0.22 85);  /* Base Insight Amber */
+  --ai-accent-600: oklch(60% 0.20 85);
+  --ai-accent-700: oklch(52% 0.18 85);
+  --ai-accent-800: oklch(44% 0.16 85);
+  --ai-accent-900: oklch(36% 0.14 85);
+  --ai-accent-950: oklch(28% 0.12 85);
+  
+  /* Data Visualization Palette */
+  --ai-data-1: oklch(65% 0.22 280);  /* Neural Blue */
+  --ai-data-2: oklch(64% 0.18 210);  /* Quantum Teal */
+  --ai-data-3: oklch(68% 0.22 85);   /* Insight Amber */
+  --ai-data-4: oklch(66% 0.24 25);   /* Signal Red */
+  --ai-data-5: oklch(69% 0.19 145);  /* Leaf Green */
+  --ai-data-6: oklch(67% 0.20 325);  /* Fusion Magenta */
+  --ai-data-7: oklch(63% 0.17 175);  /* Ocean Cyan */
+  --ai-data-8: oklch(71% 0.18 55);   /* Sunrise Yellow */
+  
+  /* Neutral Colors - Adaptive Intelligence */
+  --ai-neutral-50: oklch(98% 0.005 280);
+  --ai-neutral-100: oklch(96% 0.01 280);
+  --ai-neutral-200: oklch(90% 0.02 280);
+  --ai-neutral-300: oklch(80% 0.03 280);
+  --ai-neutral-400: oklch(70% 0.04 280);
+  --ai-neutral-500: oklch(58% 0.04 280);
+  --ai-neutral-600: oklch(48% 0.03 280);
+  --ai-neutral-700: oklch(38% 0.02 280);
+  --ai-neutral-800: oklch(28% 0.015 280);
+  --ai-neutral-900: oklch(18% 0.01 280);
+  --ai-neutral-950: oklch(10% 0.008 280);
+  
+  /* === Advanced Gradient Systems === */
+  /* These gradients use multiple color stops for more realistic AI aesthetics */
+  
+  /* Neural Gradient - Primary background gradient */
+  --ai-neural-gradient: linear-gradient(
+    135deg, 
+    var(--ai-primary-900) 0%, 
+    var(--ai-primary-700) 25%,
+    var(--ai-primary-600) 50%,
+    var(--ai-primary-500) 75%,
+    var(--ai-secondary-500) 100%
+  );
+  
+  /* Quantum Gradient - Secondary interaction gradient */
+  --ai-quantum-gradient: linear-gradient(
+    45deg, 
+    var(--ai-secondary-600) 0%, 
+    var(--ai-secondary-500) 30%,
+    var(--ai-secondary-400) 60%,
+    var(--ai-primary-400) 100%
+  );
+  
+  /* Insight Gradient - Accent highlight gradient */
+  --ai-insight-gradient: linear-gradient(
+    90deg, 
+    var(--ai-accent-500) 0%, 
+    var(--ai-accent-400) 50%,
+    var(--ai-secondary-400) 100%
+  );
+  
+  /* Data Flow Gradient - Used for animations */
+  --ai-data-flow-gradient: linear-gradient(
+    180deg,
+    var(--ai-primary-300) 0%,
+    var(--ai-secondary-400) 50%,
+    var(--ai-primary-500) 100%
+  );
+  
+  /* === Semantic Color Mappings === */
+  /* Light Theme Defaults */
+  --ai-bg-body: var(--ai-neutral-50);
+  --ai-bg-surface: white;
+  --ai-bg-card: white;
+  --ai-bg-card-hover: var(--ai-primary-50);
+  
+  --ai-text-primary: var(--ai-neutral-900);
+  --ai-text-secondary: var(--ai-neutral-700);
+  --ai-text-tertiary: var(--ai-neutral-500);
+  --ai-text-disabled: var(--ai-neutral-400);
+  
+  --ai-border-light: var(--ai-neutral-200);
+  --ai-border-medium: var(--ai-neutral-300);
+  --ai-border-heavy: var(--ai-neutral-400);
+  
+  /* Interactive States */
+  --ai-state-hover: var(--ai-primary-50);
+  --ai-state-active: var(--ai-primary-100);
+  --ai-state-selected: var(--ai-primary-100);
+  --ai-state-focus: var(--ai-primary-100);
+  
+  /* Feedback States */
+  --ai-success: oklch(65% 0.18 145);
+  --ai-error: oklch(66% 0.20 25);
+  --ai-warning: oklch(70% 0.18 85);
+  --ai-info: oklch(63% 0.18 210);
+  
+  /* === Effects & Animations === */
+  --ai-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --ai-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ai-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.1);
+  --ai-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.1);
+  
+  /* Neural Glows */
+  --ai-glow-sm: 0 0 5px rgba(var(--ai-primary-400-rgb), 0.5);
+  --ai-glow-md: 0 0 15px rgba(var(--ai-primary-400-rgb), 0.5);
+  --ai-glow-lg: 0 0 30px rgba(var(--ai-primary-400-rgb), 0.5);
+  
+  /* Animation Timing */
+  --ai-timing-fast: 150ms;
+  --ai-timing-medium: 300ms;
+  --ai-timing-slow: 500ms;
+  --ai-timing-very-slow: 1000ms;
+  
+  /* Easing Curves - Designed for realistic motion */
+  --ai-ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  --ai-ease-out-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  --ai-ease-in-precise: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+  --ai-ease-quantum: cubic-bezier(0,1.08,.44,.99); /* Special easing for simulating quantum effects */
+}
+
+/* Dark theme semantic overrides */
+.dark {
+  --ai-bg-body: var(--ai-neutral-950);
+  --ai-bg-surface: var(--ai-neutral-900);
+  --ai-bg-card: var(--ai-neutral-900);
+  --ai-bg-card-hover: var(--ai-neutral-800);
+  
+  --ai-text-primary: var(--ai-neutral-50);
+  --ai-text-secondary: var(--ai-neutral-200);
+  --ai-text-tertiary: var(--ai-neutral-400);
+  --ai-text-disabled: var(--ai-neutral-600);
+  
+  --ai-border-light: var(--ai-neutral-800);
+  --ai-border-medium: var(--ai-neutral-700);
+  --ai-border-heavy: var(--ai-neutral-600);
+  
+  --ai-state-hover: var(--ai-neutral-800);
+  --ai-state-active: var(--ai-neutral-700);
+  --ai-state-selected: var(--ai-primary-900);
+  --ai-state-focus: var(--ai-primary-900);
+  
+  /* Enhanced glow effects for dark mode */
+  --ai-glow-sm: 0 0 5px rgba(var(--ai-primary-400-rgb), 0.7);
+  --ai-glow-md: 0 0 15px rgba(var(--ai-primary-400-rgb), 0.7);
+  --ai-glow-lg: 0 0 30px rgba(var(--ai-primary-400-rgb), 0.7);
+}
+
+/* ------------------------------------------------------------
+   2. Core Typography System - Technical Precision
+   ------------------------------------------------------------ */
+
+:root {
+  /* Font Stacks - Using system fonts with fallbacks for performance */
+  --ai-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --ai-font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --ai-font-mono: 'JetBrains Mono', 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  
+  /* Font Sizes - Using a modular scale of 1.2 (minor third) */
+  --ai-text-xs: clamp(0.75rem, 0.7rem + 0.1vw, 0.8125rem);
+  --ai-text-sm: clamp(0.875rem, 0.825rem + 0.1vw, 0.9375rem);
+  --ai-text-base: clamp(1rem, 0.95rem + 0.1vw, 1.0625rem);
+  --ai-text-lg: clamp(1.125rem, 1.075rem + 0.1vw, 1.25rem);
+  --ai-text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --ai-text-2xl: clamp(1.5rem, 1.35rem + 0.5vw, 1.875rem);
+  --ai-text-3xl: clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem);
+  --ai-text-4xl: clamp(2.25rem, 1.85rem + 2vw, 3.25rem);
+  --ai-text-5xl: clamp(3rem, 2.25rem + 3.5vw, 4rem);
+  --ai-text-6xl: clamp(3.75rem, 2.75rem + 5vw, 5rem);
+  
+  /* Line Heights - Proportional to font size */
+  --ai-leading-none: 1;
+  --ai-leading-tight: 1.2;
+  --ai-leading-snug: 1.4;
+  --ai-leading-normal: 1.5;
+  --ai-leading-relaxed: 1.625;
+  --ai-leading-loose: 1.75;
+  
+  /* Letter Spacing */
+  --ai-tracking-tighter: -0.05em;
+  --ai-tracking-tight: -0.025em;
+  --ai-tracking-normal: 0em;
+  --ai-tracking-wide: 0.025em;
+  --ai-tracking-wider: 0.05em;
+  --ai-tracking-widest: 0.1em;
+}
+
+/* Base Typography Styles */
+body {
+  font-family: var(--ai-font-sans);
+  font-size: var(--ai-text-base);
+  line-height: var(--ai-leading-normal);
+  color: var(--ai-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ai-font-heading);
+  line-height: var(--ai-leading-tight);
+  font-weight: 700;
+  color: var(--ai-text-primary);
+  margin-bottom: 0.75em;
+  letter-spacing: var(--ai-tracking-tight);
+}
+
+h1 {
+  font-size: var(--ai-text-5xl);
+  letter-spacing: var(--ai-tracking-tighter);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--ai-text-4xl);
+  letter-spacing: var(--ai-tracking-tight);
+}
+
+h3 {
+  font-size: var(--ai-text-3xl);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--ai-text-2xl);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: var(--ai-text-xl);
+  font-weight: 600;
+}
+
+h6 {
+  font-size: var(--ai-text-lg);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.5em;
+  max-width: 75ch;
+  color: var(--ai-text-secondary);
+}
+
+code, pre {
+  font-family: var(--ai-font-mono);
+  font-size: 0.9em;
+}
+
+/* Data Display Typography */
+.ai-data-label {
+  font-family: var(--ai-font-mono);
+  font-size: var(--ai-text-sm);
+  letter-spacing: var(--ai-tracking-wide);
+  text-transform: uppercase;
+  color: var(--ai-text-tertiary);
+  margin-bottom: 0.5em;
+}
+
+.ai-data-value {
+  font-family: var(--ai-font-mono);
+  font-size: var(--ai-text-3xl);
+  font-weight: 700;
+  letter-spacing: var(--ai-tracking-tight);
+  line-height: 1;
+  color: var(--ai-primary-500);
+}
+
+.ai-data-caption {
+  font-size: var(--ai-text-sm);
+  color: var(--ai-text-tertiary);
+  margin-top: 0.5em;
+}
+
+/* Smart Text with Gradients */
+.ai-gradient-text {
+  background: var(--ai-neural-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  background-size: 200% auto;
+  animation: ai-text-shine 8s ease-in-out infinite alternate;
+}
+
+@keyframes ai-text-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ------------------------------------------------------------
+   3. Layout System - Cognitive Flow
+   ------------------------------------------------------------ */
+
+:root {
+  /* Spacing Scale - Using an exponential scale */
+  --ai-space-0: 0rem;
+  --ai-space-px: 1px;
+  --ai-space-0-5: 0.125rem;
+  --ai-space-1: 0.25rem;
+  --ai-space-1-5: 0.375rem;
+  --ai-space-2: 0.5rem;
+  --ai-space-2-5: 0.625rem;
+  --ai-space-3: 0.75rem;
+  --ai-space-3-5: 0.875rem;
+  --ai-space-4: 1rem;
+  --ai-space-5: 1.25rem;
+  --ai-space-6: 1.5rem;
+  --ai-space-7: 1.75rem;
+  --ai-space-8: 2rem;
+  --ai-space-9: 2.25rem;
+  --ai-space-10: 2.5rem;
+  --ai-space-12: 3rem;
+  --ai-space-14: 3.5rem;
+  --ai-space-16: 4rem;
+  --ai-space-20: 5rem;
+  --ai-space-24: 6rem;
+  --ai-space-28: 7rem;
+  --ai-space-32: 8rem;
+  --ai-space-36: 9rem;
+  --ai-space-40: 10rem;
+  --ai-space-44: 11rem;
+  --ai-space-48: 12rem;
+  --ai-space-52: 13rem;
+  --ai-space-56: 14rem;
+  --ai-space-60: 15rem;
+  --ai-space-64: 16rem;
+  --ai-space-72: 18rem;
+  --ai-space-80: 20rem;
+  --ai-space-96: 24rem;
+  
+  /* Container Max Widths */
+  --ai-container-sm: 640px;
+  --ai-container-md: 768px;
+  --ai-container-lg: 1024px;
+  --ai-container-xl: 1280px;
+  --ai-container-2xl: 1536px;
+  
+  /* Z-index Scale */
+  --ai-z-0: 0;
+  --ai-z-10: 10;
+  --ai-z-20: 20;
+  --ai-z-30: 30;
+  --ai-z-40: 40;
+  --ai-z-50: 50;
+  --ai-z-auto: auto;
+  
+  /* Layout Specific Z-indices */
+  --ai-z-header: 1000;
+  --ai-z-modal: 1100;
+  --ai-z-popover: 1050;
+  --ai-z-tooltip: 1075;
+  --ai-z-toast: 1080;
+  --ai-z-overlay: 900;
+  --ai-z-drawer: 950;
+  
+  /* Border Radius */
+  --ai-radius-none: 0;
+  --ai-radius-sm: 0.125rem;
+  --ai-radius-md: 0.25rem;
+  --ai-radius-lg: 0.375rem;
+  --ai-radius-xl: 0.5rem;
+  --ai-radius-2xl: 0.75rem;
+  --ai-radius-3xl: 1rem;
+  --ai-radius-full: 9999px;
+  
+  /* Widths and Heights */
+  --ai-header-height: 70px;
+  --ai-footer-padding: 6rem;
+}
+
+/* Container */
+.ai-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--ai-space-4);
+  padding-right: var(--ai-space-4);
+  max-width: var(--ai-container-xl);
+}
+
+@media (min-width: 640px) {
+  .ai-container {
+    padding-left: var(--ai-space-6);
+    padding-right: var(--ai-space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ai-container {
+    padding-left: var(--ai-space-8);
+    padding-right: var(--ai-space-8);
+  }
+}
+
+/* Section Layouts */
+.ai-section {
+  padding-top: var(--ai-space-16);
+  padding-bottom: var(--ai-space-16);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .ai-section {
+    padding-top: var(--ai-space-24);
+    padding-bottom: var(--ai-space-24);
+  }
+}
+
+/* Section with Wave Divider */
+.ai-section-wave {
+  position: relative;
+}
+
+.ai-section-wave::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31.74,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' style='fill: %23ffffff'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  z-index: 10;
+}
+
+/* Grid Layout System */
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--ai-space-6);
+}
+
+/* Flexbox Layouts */
+.ai-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--ai-space-6);
+}
+
+/* ------------------------------------------------------------
+   4. Component System - Intelligent Interaction
+   ------------------------------------------------------------ */
+
+/* === Buttons === */
+.ai-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ai-space-3) var(--ai-space-6);
+  border-radius: var(--ai-radius-lg);
+  font-weight: 600;
+  font-size: var(--ai-text-sm);
+  transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  text-align: center;
+}
+
+/* Primary Button */
+.ai-btn-primary {
+  background: var(--ai-neural-gradient);
+  color: white;
+  background-size: 200% 200%;
+  animation: ai-gradient-shift 8s infinite alternate var(--ai-ease-in-out);
+}
+
+.ai-btn-primary:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 0 10px rgba(var(--ai-primary-400-rgb), 0.5);
+  transform: translateY(-2px);
+}
+
+.ai-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.ai-btn-secondary {
+  background-color: transparent;
+  color: var(--ai-primary-500);
+  border: 1px solid var(--ai-primary-200);
+}
+
+.ai-btn-secondary:hover {
+  background-color: var(--ai-primary-50);
+  border-color: var(--ai-primary-300);
+  transform: translateY(-2px);
+}
+
+.ai-btn-secondary:active {
+  background-color: var(--ai-primary-100);
+  transform: translateY(0);
+}
+
+/* Button with Glow Effect */
+.ai-btn-glow {
+  position: relative;
+}
+
+.ai-btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--ai-neural-gradient);
+  border-radius: calc(var(--ai-radius-lg) + 2px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-btn-glow:hover::before {
+  opacity: 0.7;
+  animation: ai-glow-pulse 2s infinite;
+}
+
+@keyframes ai-glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Button Sizes */
+.ai-btn-sm {
+  padding: var(--ai-space-2) var(--ai-space-4);
+  font-size: var(--ai-text-xs);
+  border-radius: var(--ai-radius-md);
+}
+
+.ai-btn-lg {
+  padding: var(--ai-space-4) var(--ai-space-8);
+  font-size: var(--ai-text-base);
+  border-radius: var(--ai-radius-xl);
+}
+
+/* Icon Button */
+.ai-btn-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--ai-radius-full);
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Cards === */
+.ai-card {
+  background-color: var(--ai-bg-card);
+  border-radius: var(--ai-radius-2xl);
+  padding: var(--ai-space-6);
+  box-shadow: var(--ai-shadow-md);
+  transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--ai-border-light);
+}
+
+.ai-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ai-shadow-lg);
+  border-color: var(--ai-primary-200);
+}
+
+/* Card with Neural Background */
+.ai-card-neural {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-card-neural::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--ai-neural-gradient);
+  opacity: 0.03;
+  z-index: -1;
+  transition: opacity var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-card-neural:hover::before {
+  opacity: 0.07;
+}
+
+/* Feature Card */
+.ai-feature-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ai-feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--ai-neural-gradient);
+  border-radius: var(--ai-radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  margin-bottom: var(--ai-space-4);
+  transition: transform var(--ai-timing-medium) var(--ai-ease-out-back);
+}
+
+.ai-feature-card:hover .ai-feature-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.ai-feature-title {
+  font-size: var(--ai-text-xl);
+  font-weight: 600;
+  margin-bottom: var(--ai-space-3);
+  color: var(--ai-text-primary);
+}
+
+.ai-feature-desc {
+  font-size: var(--ai-text-sm);
+  color: var(--ai-text-secondary);
+  flex-grow: 1;
+  margin-bottom: var(--ai-space-4);
+}
+
+/* === Navigation === */
+.ai-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--ai-z-header);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ai-border-light);
+  transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-header.scrolled {
+  box-shadow: var(--ai-shadow-sm);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.dark .ai-header {
+  background-color: rgba(10, 10, 20, 0.8);
+}
+
+.dark .ai-header.scrolled {
+  background-color: rgba(10, 10, 20, 0.95);
+}
+
+.ai-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--ai-header-height);
+}
+
+.ai-logo {
+  font-family: var(--ai-font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--ai-primary-500);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--ai-space-2);
+}
+
+.ai-nav-links {
+  display: flex;
+  gap: var(--ai-space-6);
+}
+
+.ai-nav-link {
+  position: relative;
+  color: var(--ai-text-secondary);
+  font-weight: 500;
+  text-decoration: none;
+  padding: var(--ai-space-2) 0;
+  transition: color var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ai-neural-gradient);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-nav-link:hover {
+  color: var(--ai-primary-500);
+}
+
+.ai-nav-link:hover::after,
+.ai-nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.ai-nav-link.active {
+  color: var(--ai-primary-500);
+  font-weight: 600;
+}
+
+/* === Form Elements === */
+.ai-form-group {
+  margin-bottom: var(--ai-space-4);
+}
+
+.ai-label {
+  display: block;
+  margin-bottom: var(--ai-space-2);
+  font-weight: 500;
+  color: var(--ai-text-secondary);
+}
+
+.ai-input {
+  width: 100%;
+  padding: var(--ai-space-3) var(--ai-space-4);
+  background-color: var(--ai-bg-surface);
+  border: 1px solid var(--ai-border-medium);
+  border-radius: var(--ai-radius-lg);
+  font-size: var(--ai-text-sm);
+  transition: all var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-input:focus {
+  outline: none;
+  border-color: var(--ai-primary-400);
+  box-shadow: 0 0 0 3px rgba(var(--ai-primary-400-rgb), 0.2);
+}
+
+.ai-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.ai-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236366F1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--ai-space-3) center;
+  background-size: 16px;
+  padding-right: var(--ai-space-10);
+}
+
+.ai-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: var(--ai-space-2);
+  cursor: pointer;
+}
+
+.ai-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+/* === Hero Section === */
+.ai-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--ai-neural-gradient);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+}
+
+.ai-hero-title {
+  font-size: var(--ai-text-6xl);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--ai-space-6);
+  color: white;
+}
+
+.ai-hero-subtitle {
+  font-size: var(--ai-text-xl);
+  margin-bottom: var(--ai-space-8);
+  opacity: 0.9;
+}
+
+.ai-hero-cta {
+  display: flex;
+  gap: var(--ai-space-4);
+  margin-top: var(--ai-space-6);
+}
+
+/* Neural Network Background */
+.ai-neural-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.ai-neural-node {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: ai-neural-pulse 3s infinite ease-in-out;
+}
+
+@keyframes ai-neural-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.9;
+  }
+}
+
+.ai-neural-connection {
+  position: absolute;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform-origin: left center;
+}
+
+/* Custom Wave Animation */
+.ai-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31.74,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' style='fill: %23ffffff'/%3E%3C/svg%3E");
+  background-size: cover;
+  animation: ai-wave-animation 20s linear infinite alternate;
+}
+
+@keyframes ai-wave-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Testimonial Cards */
+.ai-testimonial {
+  background-color: white;
+  border-radius: var(--ai-radius-2xl);
+  padding: var(--ai-space-6);
+  box-shadow: var(--ai-shadow-lg);
+  transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ai-testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ai-shadow-xl);
+}
+
+.ai-testimonial-content {
+  flex-grow: 1;
+  font-style: italic;
+  margin-bottom: var(--ai-space-4);
+  color: var(--ai-text-secondary);
+  position: relative;
+  padding-top: var(--ai-space-6);
+}
+
+.ai-testimonial-content::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  font-size: 5rem;
+  color: var(--ai-primary-100);
+  font-family: serif;
+  line-height: 1;
+  opacity: 0.5;
+}
+
+.ai-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--ai-space-3);
+}
+
+.ai-testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ai-testimonial-name {
+  font-weight: 600;
+  color: var(--ai-text-primary);
+}
+
+.ai-testimonial-title {
+  font-size: var(--ai-text-sm);
+  color: var(--ai-text-tertiary);
+}
+
+/* Team Member Cards */
+.ai-team-member {
+  text-align: center;
+}
+
+.ai-team-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--ai-space-4);
+  border: 3px solid var(--ai-bg-surface);
+  box-shadow: var(--ai-shadow-md);
+  transition: transform var(--ai-timing-medium) var(--ai-ease-out-back);
+}
+
+.ai-team-member:hover .ai-team-avatar {
+  transform: scale(1.05);
+}
+
+.ai-team-name {
+  font-weight: 600;
+  font-size: var(--ai-text-lg);
+  margin-bottom: var(--ai-space-1);
+}
+
+.ai-team-role {
+  color: var(--ai-primary-500);
+  font-size: var(--ai-text-sm);
+  margin-bottom: var(--ai-space-3);
+}
+
+.ai-team-bio {
+  font-size: var(--ai-text-sm);
+  color: var(--ai-text-secondary);
+  margin-bottom: var(--ai-space-4);
+}
+
+.ai-social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--ai-space-3);
+}
+
+.ai-social-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--ai-neutral-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ai-text-secondary);
+  transition: all var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-social-link:hover {
+  background-color: var(--ai-primary-500);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Stats Section */
+.ai-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--ai-space-8);
+}
+
+.ai-stat {
+  text-align: center;
+}
+
+.ai-stat-value {
+  font-size: var(--ai-text-4xl);
+  font-weight: 700;
+  color: var(--ai-primary-500);
+  margin-bottom: var(--ai-space-2);
+  font-family: var(--ai-font-mono);
+  position: relative;
+  display: inline-block;
+}
+
+.ai-stat-value::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--ai-neural-gradient);
+  border-radius: var(--ai-radius-full);
+}
+
+.ai-stat-label {
+  color: var(--ai-text-secondary);
+  font-size: var(--ai-text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--ai-tracking-wider);
+}
+
+/* Pricing Tables */
+.ai-pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--ai-space-6);
+}
+
+.ai-pricing-card {
+  background-color: var(--ai-bg-card);
+  border-radius: var(--ai-radius-2xl);
+  padding: var(--ai-space-6);
+  box-shadow: var(--ai-shadow-md);
+  transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid var(--ai-border-light);
+  overflow: hidden;
+}
+
+.ai-pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ai-shadow-lg);
+  border-color: var(--ai-primary-200);
+}
+
+.ai-pricing-card.featured {
+  border-color: var(--ai-primary-400);
+  transform: scale(1.05);
+  box-shadow: var(--ai-shadow-lg);
+}
+
+.ai-pricing-header {
+  text-align: center;
+  margin-bottom: var(--ai-space-6);
+  padding-bottom: var(--ai-space-6);
+  border-bottom: 1px solid var(--ai-border-light);
+}
+
+.ai-pricing-title {
+  font-size: var(--ai-text-xl);
+  font-weight: 600;
+  margin-bottom: var(--ai-space-2);
+}
+
+.ai-pricing-price {
+  font-size: var(--ai-text-4xl);
+  font-weight: 700;
+  color: var(--ai-primary-500);
+  margin-bottom: var(--ai-space-2);
+}
+
+.ai-pricing-period {
+  font-size: var(--ai-text-sm);
+  color: var(--ai-text-tertiary);
+}
+
+.ai-pricing-features {
+  list-style: none;
+  margin-bottom: var(--ai-space-6);
+  flex-grow: 1;
+}
+
+.ai-pricing-feature {
+  padding: var(--ai-space-2) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--ai-space-2);
+  color: var(--ai-text-secondary);
+}
+
+.ai-pricing-feature i {
+  color: var(--ai-success);
+}
+
+.ai-pricing-feature.disabled {
+  color: var(--ai-text-disabled);
+  text-decoration: line-through;
+}
+
+.ai-pricing-feature.disabled i {
+  color: var(--ai-text-disabled);
+}
+
+.ai-pricing-cta {
+  margin-top: var(--ai-space-4);
+}
+
+/* Contact Section */
+.ai-contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--ai-space-8);
+}
+
+@media (min-width: 768px) {
+  .ai-contact {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.ai-contact-info {
+  background: var(--ai-neural-gradient);
+  padding: var(--ai-space-6);
+  border-radius: var(--ai-radius-2xl);
+  color: white;
+}
+
+.ai-contact-heading {
+  font-size: var(--ai-text-2xl);
+  margin-bottom: var(--ai-space-4);
+  color: white;
+}
+
+.ai-contact-text {
+  margin-bottom: var(--ai-space-6);
+  opacity: 0.9;
+  color: white;
+}
+
+.ai-contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--ai-space-3);
+  margin-bottom: var(--ai-space-4);
+}
+
+.ai-contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--ai-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-contact-form {
+  padding: var(--ai-space-6);
+  background-color: var(--ai-bg-card);
+  border-radius: var(--ai-radius-2xl);
+  box-shadow: var(--ai-shadow-lg);
+}
+
+/* Footer */
+.ai-footer {
+  background-color: var(--ai-neural-gradient);
+  color: white;
+  padding-top: var(--ai-space-16);
+  padding-bottom: var(--ai-space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--ai-space-8);
+  margin-bottom: var(--ai-space-12);
+}
+
+.ai-footer-logo {
+  color: white;
+  font-size: var(--ai-text-xl);
+  font-weight: 700;
+  margin-bottom: var(--ai-space-4);
+  text-decoration: none;
+}
+
+.ai-footer-text {
+  opacity: 0.8;
+  margin-bottom: var(--ai-space-6);
+}
+
+.ai-footer-heading {
+  font-size: var(--ai-text-lg);
+  font-weight: 600;
+  margin-bottom: var(--ai-space-4);
+  color: white;
+  position: relative;
+  padding-bottom: var(--ai-space-2);
+}
+
+.ai-footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--ai-accent-400);
+}
+
+.ai-footer-links {
+  list-style: none;
+}
+
+.ai-footer-link {
+  padding: var(--ai-space-1) 0;
+}
+
+.ai-footer-link a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-footer-link a:hover {
+  color: white;
+  padding-left: var(--ai-space-2);
+}
+
+.ai-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--ai-space-6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--ai-space-4);
+}
+
+.ai-footer-copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--ai-text-sm);
+}
+
+.ai-footer-social {
+  display: flex;
+  gap: var(--ai-space-3);
+}
+
+/* Back to Top Button */
+.ai-back-to-top {
+  position: fixed;
+  bottom: var(--ai-space-6);
+  right: var(--ai-space-6);
+  width: 44px;
+  height: 44px;
+  background: var(--ai-neural-gradient);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--ai-shadow-md);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+  z-index: 100;
+}
+
+.ai-back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ai-shadow-lg);
+}
+
+/* ------------------------------------------------------------
+   5. Advanced AI Animation System
+   ------------------------------------------------------------ */
+
+/* Neural Network Animations */
+.ai-neural-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes ai-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes ai-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes ai-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes ai-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animated Data Flow Background */
+.ai-data-flow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill-opacity="0.05" x="0" y="0" width="100" height="1" fill="white" /></svg>');
+  animation: ai-data-flow-animation 20s linear infinite;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+@keyframes ai-data-flow-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100px);
+  }
+}
+
+/* WebGL Neural Background (placeholder for the description) */
+.ai-webgl-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Typing Animation for Headings */
+.ai-typing-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.ai-typing-animation::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  animation: ai-typing-cursor 1s infinite;
+}
+
+@keyframes ai-typing-cursor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Data Pulse Effect */
+.ai-data-pulse {
+  position: relative;
+}
+
+.ai-data-pulse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: var(--ai-neural-gradient);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ai-data-pulse-animation 2s infinite;
+}
+
+@keyframes ai-data-pulse-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Interactive Hover Effects */
+.ai-interactive-hover {
+  transition: transform var(--ai-timing-medium) var(--ai-ease-quantum);
+}
+
+.ai-interactive-hover:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+/* Ripple Effect */
+.ai-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-ripple::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.8s var(--ai-ease-quantum), opacity 0.8s var(--ai-ease-quantum);
+}
+
+.ai-ripple:active::after {
+  transform: scale(4);
+  opacity: 0;
+  transition: 0s;
+}
+
+/* Scroll Trigger Animations */
+.ai-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--ai-timing-medium) var(--ai-ease-in-out),
+              transform var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ai-fade-in-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.ai-fade-in-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.ai-fade-in-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.ai-fade-in-delay-4 {
+  transition-delay: 0.4s;
+}
+
+.ai-fade-in-delay-5 {
+  transition-delay: 0.5s;
+}
+
+/* Scale Animation */
+.ai-scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity var(--ai-timing-medium) var(--ai-ease-in-out),
+              transform var(--ai-timing-medium) var(--ai-ease-out-back);
+}
+
+.ai-scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide Animations */
+.ai-slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity var(--ai-timing-medium) var(--ai-ease-in-out),
+              transform var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity var(--ai-timing-medium) var(--ai-ease-in-out),
+              transform var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-slide-in-left.visible,
+.ai-slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ------------------------------------------------------------
+   6. Responsive Design & Accessibility
+   ------------------------------------------------------------ */
+
+/* Base Responsive Adjustments */
+@media (max-width: 1280px) {
+  :root {
+    --ai-text-5xl: clamp(2.75rem, 2rem + 3vw, 3.5rem);
+    --ai-text-6xl: clamp(3.25rem, 2.5rem + 4vw, 4.5rem);
+  }
+  
+  .ai-hero-title {
+    font-size: var(--ai-text-5xl);
+  }
+}
+
+@media (max-width: 1024px) {
+  .ai-grid {
+    gap: var(--ai-space-4);
+  }
+  
+  .ai-section {
+    padding-top: var(--ai-space-20);
+    padding-bottom: var(--ai-space-20);
+  }
+  
+  .ai-pricing-card.featured {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --ai-text-4xl: clamp(2rem, 1.75rem + 1.5vw, 2.75rem);
+    --ai-text-5xl: clamp(2.5rem, 2rem + 2vw, 3rem);
+  }
+  
+  .ai-section {
+    padding-top: var(--ai-space-16);
+    padding-bottom: var(--ai-space-16);
+  }
+  
+  .ai-hero-content {
+    text-align: center;
+    padding: var(--ai-space-8) var(--ai-space-4);
+  }
+  
+  .ai-hero-cta {
+    justify-content: center;
+  }
+  
+  .ai-pricing-card.featured {
+    transform: scale(1);
+  }
+  
+  .ai-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ai-footer-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .ai-hero-cta .ai-btn {
+    width: 100%;
+  }
+  
+  .ai-card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ai-stats {
+    grid-template-columns: 1fr;
+    gap: var(--ai-space-6);
+  }
+}
+
+/* Mobile Navigation */
+.ai-mobile-nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  z-index: var(--ai-z-header);
+}
+
+.ai-mobile-nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--ai-text-primary);
+  position: relative;
+  transition: all var(--ai-timing-fast) var(--ai-ease-in-out);
+  margin: 0 auto;
+}
+
+.ai-mobile-nav-toggle span:before,
+.ai-mobile-nav-toggle span:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: var(--ai-text-primary);
+  transition: all var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-mobile-nav-toggle span:before {
+  top: -8px;
+}
+
+.ai-mobile-nav-toggle span:after {
+  bottom: -8px;
+}
+
+.ai-mobile-nav-toggle.active span {
+  background-color: transparent;
+}
+
+.ai-mobile-nav-toggle.active span:before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.ai-mobile-nav-toggle.active span:after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .ai-mobile-nav-toggle {
+    display: block;
+  }
+  
+  .ai-nav-links {
+    position: fixed;
+    top: var(--ai-header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--ai-bg-surface);
+    box-shadow: var(--ai-shadow-md);
+    padding: var(--ai-space-6);
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+    z-index: var(--ai-z-header);
+  }
+  
+  .ai-nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .ai-nav-link {
+    padding: var(--ai-space-3) 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.ai-dark-mode-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--ai-radius-full);
+  background-color: var(--ai-bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--ai-shadow-md);
+  transition: all var(--ai-timing-fast) var(--ai-ease-in-out);
+  border: 1px solid var(--ai-border-light);
+}
+
+.ai-dark-mode-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ai-shadow-lg);
+}
+
+/* Skip to content link for accessibility */
+.ai-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--ai-primary-500);
+  color: white;
+  padding: var(--ai-space-3) var(--ai-space-4);
+  z-index: var(--ai-z-header);
+  transition: top var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-skip-link:focus {
+  top: 0;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--ai-primary-500);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------
+   7. WebGL Neural Network Background
+   ------------------------------------------------------------ */
+
+/* Canvas container for WebGL animations */
+.ai-webgl-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ai-webgl-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation speed control for neural network */
+.ai-neural-fast {
+  --ai-neural-speed: 0.6;
+}
+
+.ai-neural-normal {
+  --ai-neural-speed: 1;
+}
+
+.ai-neural-slow {
+  --ai-neural-speed: 1.5;
+}
+
+/* Particle density control */
+.ai-particles-low {
+  --ai-particle-density: 0.5;
+}
+
+.ai-particles-medium {
+  --ai-particle-density: 1;
+}
+
+.ai-particles-high {
+  --ai-particle-density: 1.5;
+}
+
+/* Neural connection types */
+.ai-neural-style-dots {
+  --ai-neural-style: 'dots';
+}
+
+.ai-neural-style-lines {
+  --ai-neural-style: 'lines';
+}
+
+.ai-neural-style-grid {
+  --ai-neural-style: 'grid';
+}
+
+/* Neural network color themes */
+.ai-neural-theme-blue {
+  --ai-neural-primary-color: var(--ai-primary-500);
+  --ai-neural-secondary-color: var(--ai-secondary-500);
+}
+
+.ai-neural-theme-teal {
+  --ai-neural-primary-color: var(--ai-secondary-500);
+  --ai-neural-secondary-color: var(--ai-accent-500);
+}
+
+.ai-neural-theme-multi {
+  --ai-neural-primary-color: var(--ai-primary-500);
+  --ai-neural-secondary-color: var(--ai-accent-500);
+  --ai-neural-tertiary-color: var(--ai-secondary-500);
+}
+
+/* ------------------------------------------------------------
+   8. Performance Optimizations
+   ------------------------------------------------------------ */
+
+/* Content-visibility for improved performance */
+.ai-optimize-visibility {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+}
+
+/* Lazy-loaded sections */
+.ai-lazy-section {
+  min-height: 100px;
+  position: relative;
+}
+
+.ai-lazy-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--ai-neutral-100) 0%, var(--ai-neutral-200) 50%, var(--ai-neutral-100) 100%);
+  background-size: 200% 100%;
+  animation: ai-skeleton-loading 1.5s infinite;
+}
+
+@keyframes ai-skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Use hardware acceleration for animations */
+.ai-hardware-accelerated {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ------------------------------------------------------------
+   9. Utility Classes
+   ------------------------------------------------------------ */
+
+/* Spacing utilities */
+.ai-mt-0 { margin-top: var(--ai-space-0); }
+.ai-mt-1 { margin-top: var(--ai-space-1); }
+.ai-mt-2 { margin-top: var(--ai-space-2); }
+.ai-mt-4 { margin-top: var(--ai-space-4); }
+.ai-mt-6 { margin-top: var(--ai-space-6); }
+.ai-mt-8 { margin-top: var(--ai-space-8); }
+.ai-mt-12 { margin-top: var(--ai-space-12); }
+.ai-mt-16 { margin-top: var(--ai-space-16); }
+
+.ai-mb-0 { margin-bottom: var(--ai-space-0); }
+.ai-mb-1 { margin-bottom: var(--ai-space-1); }
+.ai-mb-2 { margin-bottom: var(--ai-space-2); }
+.ai-mb-4 { margin-bottom: var(--ai-space-4); }
+.ai-mb-6 { margin-bottom: var(--ai-space-6); }
+.ai-mb-8 { margin-bottom: var(--ai-space-8); }
+.ai-mb-12 { margin-bottom: var(--ai-space-12); }
+.ai-mb-16 { margin-bottom: var(--ai-space-16); }
+
+.ai-pt-0 { padding-top: var(--ai-space-0); }
+.ai-pt-1 { padding-top: var(--ai-space-1); }
+.ai-pt-2 { padding-top: var(--ai-space-2); }
+.ai-pt-4 { padding-top: var(--ai-space-4); }
+.ai-pt-6 { padding-top: var(--ai-space-6); }
+.ai-pt-8 { padding-top: var(--ai-space-8); }
+.ai-pt-12 { padding-top: var(--ai-space-12); }
+.ai-pt-16 { padding-top: var(--ai-space-16); }
+
+.ai-pb-0 { padding-bottom: var(--ai-space-0); }
+.ai-pb-1 { padding-bottom: var(--ai-space-1); }
+.ai-pb-2 { padding-bottom: var(--ai-space-2); }
+.ai-pb-4 { padding-bottom: var(--ai-space-4); }
+.ai-pb-6 { padding-bottom: var(--ai-space-6); }
+.ai-pb-8 { padding-bottom: var(--ai-space-8); }
+.ai-pb-12 { padding-bottom: var(--ai-space-12); }
+.ai-pb-16 { padding-bottom: var(--ai-space-16); }
+
+/* Flexbox utilities */
+.ai-flex { display: flex; }
+.ai-inline-flex { display: inline-flex; }
+.ai-flex-row { flex-direction: row; }
+.ai-flex-col { flex-direction: column; }
+.ai-flex-wrap { flex-wrap: wrap; }
+.ai-items-start { align-items: flex-start; }
+.ai-items-center { align-items: center; }
+.ai-items-end { align-items: flex-end; }
+.ai-justify-start { justify-content: flex-start; }
+.ai-justify-center { justify-content: center; }
+.ai-justify-end { justify-content: flex-end; }
+.ai-justify-between { justify-content: space-between; }
+.ai-gap-2 { gap: var(--ai-space-2); }
+.ai-gap-4 { gap: var(--ai-space-4); }
+.ai-gap-6 { gap: var(--ai-space-6); }
+
+/* Text utilities */
+.ai-text-center { text-align: center; }
+.ai-text-left { text-align: left; }
+.ai-text-right { text-align: right; }
+.ai-font-bold { font-weight: 700; }
+.ai-font-semibold { font-weight: 600; }
+.ai-font-medium { font-weight: 500; }
+.ai-font-normal { font-weight: 400; }
+.ai-uppercase { text-transform: uppercase; }
+.ai-capitalize { text-transform: capitalize; }
+
+/* Color utilities */
+.ai-text-primary { color: var(--ai-primary-500); }
+.ai-text-secondary { color: var(--ai-secondary-500); }
+.ai-text-accent { color: var(--ai-accent-500); }
+.ai-bg-primary { background-color: var(--ai-primary-500); }
+.ai-bg-secondary { background-color: var(--ai-secondary-500); }
+.ai-bg-accent { background-color: var(--ai-accent-500); }
+
+/* Display utilities */
+.ai-block { display: block; }
+.ai-inline-block { display: inline-block; }
+.ai-hidden { display: none; }
+
+@media (min-width: 640px) {
+  .ai-sm-block { display: block; }
+  .ai-sm-hidden { display: none; }
+}
+
+@media (min-width: 768px) {
+  .ai-md-block { display: block; }
+  .ai-md-hidden { display: none; }
+}
+
+@media (min-width: 1024px) {
+  .ai-lg-block { display: block; }
+  .ai-lg-hidden { display: none; }
+}
+
+/* ------------------------------------------------------------
+   10. JavaScript Integration for Animation System
+   ------------------------------------------------------------ */
+
+/* 
+   The JavaScript for the neural network animation system
+   should be included in a separate file and loaded
+   before the closing body tag. It will interact with
+   elements that have the following classes:
+   
+   - ai-webgl-container
+   - ai-neural-animation
+   - ai-fade-in
+   - ai-slide-in-left
+   - ai-slide-in-right
+   - ai-scale-in
+   
+   Additional animation behaviors and interaction effects
+   will be controlled via JavaScript.
+*/
+
+/* ------------------------------------------------------------
+   11. Detailed Component States
+   ------------------------------------------------------------ */
+
+/* Button Loading State */
+.ai-btn-loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.ai-btn-loading .ai-btn-text {
+  visibility: hidden;
+}
+
+.ai-btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  animation: ai-spin 0.8s infinite linear;
+}
+
+@keyframes ai-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form Validation States */
+.ai-input-error {
+  border-color: var(--ai-error);
+}
+
+.ai-input-success {
+  border-color: var(--ai-success);
+}
+
+.ai-error-message {
+  color: var(--ai-error);
+  font-size: var(--ai-text-sm);
+  margin-top: var(--ai-space-1);
+}
+
+.ai-success-message {
+  color: var(--ai-success);
+  font-size: var(--ai-text-sm);
+  margin-top: var(--ai-space-1);
+}
+
+/* Card Active State */
+.ai-card-active {
+  border-color: var(--ai-primary-400);
+  box-shadow: 0 0 0 2px var(--ai-primary-400);
+}
+
+/* Custom Checkbox Styling */
+.ai-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: var(--ai-space-2);
+  position: relative;
+}
+
+.ai-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ai-checkbox-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--ai-bg-surface);
+  border: 1px solid var(--ai-border-medium);
+  border-radius: var(--ai-radius-md);
+  transition: all var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-checkbox-input:checked + .ai-checkbox-mark {
+  background-color: var(--ai-primary-500);
+  border-color: var(--ai-primary-500);
+}
+
+.ai-checkbox-input:checked + .ai-checkbox-mark::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.ai-checkbox-input:focus + .ai-checkbox-mark {
+  box-shadow: 0 0 0 3px rgba(var(--ai-primary-400-rgb), 0.2);
+}
+
+/* Custom Radio Button Styling */
+.ai-radio-mark {
+  border-radius: 50%;
+}
+
+.ai-radio-input:checked + .ai-radio-mark::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+/* Custom Select Styling */
+.ai-select-container {
+  position: relative;
+}
+
+.ai-select-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: var(--ai-space-4);
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--ai-text-secondary);
+  pointer-events: none;
+}
+
+/* Toast Notifications */
+.ai-toast {
+  position: fixed;
+  bottom: var(--ai-space-6);
+  right: var(--ai-space-6);
+  padding: var(--ai-space-4) var(--ai-space-6);
+  background-color: var(--ai-bg-card);
+  border-radius: var(--ai-radius-lg);
+  box-shadow: var(--ai-shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--ai-space-3);
+  z-index: var(--ai-z-toast);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all var(--ai-timing-medium) var(--ai-ease-in-out);
+}
+
+.ai-toast.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ai-toast-success {
+  border-left: 4px solid var(--ai-success);
+}
+
+.ai-toast-error {
+  border-left: 4px solid var(--ai-error);
+}
+
+.ai-toast-warning {
+  border-left: 4px solid var(--ai-warning);
+}
+
+.ai-toast-info {
+  border-left: 4px solid var(--ai-info);
+}
+
+.ai-toast-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.ai-toast-content {
+  flex-grow: 1;
+}
+
+.ai-toast-title {
+  font-weight: 600;
+  margin-bottom: var(--ai-space-1);
+}
+
+.ai-toast-message {
+  font-size: var(--ai-text-sm);
+  color: var(--ai-text-secondary);
+}
+
+.ai-toast-close {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ai-text-tertiary);
+  transition: color var(--ai-timing-fast) var(--ai-ease-in-out);
+}
+
+.ai-toast-close:hover {
+  color: var(--ai-text-primary);
+}
+
+/* ------------------------------------------------------------
+   12. Print Styles
+   ------------------------------------------------------------ */
+
+@media print {
+  .ai-header,
+  .ai-footer,
+  .ai-back-to-top,
+  .ai-webgl-container,
+  .ai-neural-bg,
+  .ai-data-flow {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .ai-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .ai-section {
+    padding: 1cm 0 !important;
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  
+  p, blockquote, ul, ol, dl, table {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  .ai-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
